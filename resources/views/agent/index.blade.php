@@ -230,12 +230,24 @@
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="dropdown" id="dropdown">
-                        <div class="dropdown-toggle " onclick="toggleDropdown()">Sort by <i class="fa fa-caret-down"></i></div>
-                        <div class="dropdown-content" id="dropdown-content">
-                            <a href="#">Leads</a>
-                            <a href="#">Calls</a>
-                            <a href="#">Email</a>
-                        </div>
+                        <form style="display: flex ;justify-content: space-between ; box-shadow: none; background: none" action=/agent/leads/search/{query}"  method="get" class="">
+
+                            <div style="width: 80%"  >
+                                <select name="query" id="status" class="form-select dropdown-toggle">
+                                    <option value="">Sort by status</option>
+                                    <option value="pending">pending</option>
+                                    <option value="accepted">accepted</option>
+                                    <option value="denied">denied</option>
+                                    <option value="call back">call back</option>
+                                    <option value="survey booked">survey booked</option>
+                                    <option value="survey conducted">survey conducted</option>
+                                    <option value="installed">installed</option>
+                                </select>
+
+                            </div>
+                            <button type="submit" class="" style="font-size: 17px; font-family: 'poppinsregular'; color: white; background-color: rgb(0, 203, 132); width: 4rem; border: none; border-radius: 5px;" >filter</button>
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -320,12 +332,12 @@
                         </td>
                         <td>
                             <div class="leadSourcebuttons">
-                                <p>call</p>
+                                <p>Agent</p>
                             </div>
                         </td>
                         <td>
                             <div class="leadStatusButtons1">
-                                <p>. Deal unqualified</p>
+                                <p>{{$lead->status}}</p>
                             </div>
                         </td>
                         <td>

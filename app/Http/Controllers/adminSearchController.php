@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Lead;
 use Illuminate\Http\Request;
 
-class SearchController extends Controller
+class adminSearchController extends Controller
 {
+
     public function search(Request $request){
         $query = $request->input('query');
         switch ($query) {
@@ -39,7 +40,7 @@ class SearchController extends Controller
         $nextPageLink = $leads->nextPageUrl();
         $totalLeads  = Lead::count();
 
-        return view('agent.index' , compact('leads' , 'prevPageLink','nextPageLink','totalLeads'));
+        return view('admin.index' , compact('leads' , 'prevPageLink','nextPageLink','totalLeads'));
 
     }
 }

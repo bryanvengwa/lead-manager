@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminLeadController;
+use App\Http\Controllers\adminSearchController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\InstallerController;
@@ -30,7 +31,7 @@ Route::middleware(['auth' ,'role:admin'])->prefix('/admin')->name('admin.')->gro
     Route::get('/leads/create', [AdminLeadController::class , 'create'])->name('create');
     Route::get('/leads/edit{id}',[AdminLeadController::class , 'edit'])->name('edit');
     Route::get('/leads/{id}', [AdminLeadController::class, 'destroy'])->name('destroy');
-    Route::get('/leads/search/{query}',[SearchController::class, 'search'])->name('search');
+    Route::get('/leads/search/{query}',[adminSearchController::class, 'search'])->name('search');
     Route::post('leads/store', [ \App\Http\Controllers\AdminSubmitLeadController::class, 'store'])->name('store');
     Route::post('leads/update', [ \App\Http\Controllers\AdminSubmitLeadController::class, 'update'])->name('update');
 
