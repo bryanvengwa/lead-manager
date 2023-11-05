@@ -1,0 +1,1795 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+section {
+  padding: 30px 15px;
+}
+
+header {
+  padding: 15px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img {
+  width: 140px;
+  height: 50px;
+}
+header nav ul {
+  display: none;
+}
+header nav ul .custom-dropdown {
+  position: relative;
+}
+header nav ul .custom-dropdown .custom-dropdown-content {
+  background-color: rgb(0, 203, 132);
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 12px;
+  padding: 3px;
+  color: white;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+header nav ul .custom-dropdown .custom-dropdown-content a {
+  display: block;
+  padding: 7px 10px;
+  color: white;
+  font-family: "poppinsregular";
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav ul .custom-dropdown .custom-dropdown-content a:hover {
+  background-color: white;
+  color: rgb(156, 154, 154);
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  font-size: 15px;
+  font-family: "poppinsregular";
+}
+header nav ul li a:hover {
+  color: green;
+}
+header nav .hamMenu-navIcons-pImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header nav .hamMenu-navIcons-pImage .toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+}
+header nav .hamMenu-navIcons-pImage .toggle-button .bar {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 12px;
+}
+header nav .hamMenu-navIcons-pImage .darkModeIconContainer {
+  background-color: rgb(0, 203, 132);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  padding: 10px;
+}
+header nav .hamMenu-navIcons-pImage .darkModeIconContainer #changeModeIcon {
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+}
+header nav .hamMenu-navIcons-pImage iconify-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+header nav .hamMenu-navIcons-pImage .dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+header nav .hamMenu-navIcons-pImage #menuGridIcon {
+  margin-top: 7px;
+}
+header nav .hamMenu-navIcons-pImage .dropdown-content {
+  background-color: rgb(0, 203, 132);
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 12px;
+  padding: 3px;
+  width: 85px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+header nav .hamMenu-navIcons-pImage .dropdown-content a {
+  display: block;
+  padding: 3px 3px;
+  text-decoration: none;
+  border-radius: 7px;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav .hamMenu-navIcons-pImage .dropdown-content a:hover {
+  background-color: white;
+  color: rgb(156, 154, 154);
+}
+header nav .hamMenu-navIcons-pImage .dropdown-open {
+  opacity: 1;
+  visibility: visible;
+}
+header nav .hamMenu-navIcons-pImage img {
+  width: 45px;
+  height: 45px;
+}
+header .overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  overflow-y: auto;
+  transition: 0.5s;
+}
+header .overlay .closebtn {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  right: 35px;
+}
+header .overlay .closebtn:hover {
+  color: rgb(0, 203, 132);
+}
+header .overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  text-align: center;
+}
+header .overlay .overlay-content ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+header .overlay .overlay-content ul li {
+  margin: 0;
+  position: relative;
+}
+header .overlay .overlay-content ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "poppinsregular";
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 0px;
+  position: relative;
+}
+header .overlay .overlay-content ul li a:hover {
+  color: rgb(0, 203, 132);
+}
+header .overlay .overlay-content ul li a .custom-dropdown {
+  position: relative;
+}
+header .overlay .overlay-content ul li a .custom-dropdown:hover .custom-dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+header .overlay .overlay-content ul li a .custom-dropdown .custom-dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+header .overlay .overlay-content ul li .custom-dropdown-content {
+  background-color: rgb(0, 203, 132);
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 12px;
+  padding: 3px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position the dropdown to the left */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 1; /* Use z-index to ensure the dropdown displays above other content */
+  transition: opacity 0.3s ease;
+}
+header .overlay .overlay-content ul li .custom-dropdown-content a {
+  display: block;
+  padding: 7px 10px;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header .overlay .overlay-content ul li .custom-dropdown-content a:hover {
+  background-color: white;
+  color: rgb(156, 154, 154);
+}
+header .overlay .overlay-content ul li .content1 {
+  margin-left: 40px;
+}
+header .overlay .overlay-content ul li .content2 {
+  margin-left: 20px;
+}
+
+#profile .profile-inner {
+  background-color: rgba(0, 195, 133, 0.1333333333);
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 15px;
+}
+#profile .profile-inner .avatar {
+  padding: 1rem 0 0 2rem;
+}
+#profile .profile-inner .greetings {
+  padding: 1rem 0 0 2rem;
+}
+#profile .profile-inner .greetings h1 {
+  font-size: 30px;
+  font-family: "poppinssemibold";
+}
+#profile .profile-inner .greetings h1 span {
+  font-family: "poppinsregular";
+}
+#profile .profile-inner .addNewListing {
+  padding: 1rem 2rem 0 2rem;
+  margin-left: auto;
+}
+#profile .profile-inner .addNewListing button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  border: none;
+  padding: 12px 0px;
+  width: 200px;
+  border-radius: 5px;
+}
+#profile .profile-inner .addNewListing button:hover {
+  background-color: rgb(200, 197, 197);
+}
+#profile .profile-inner .dashboard-menu {
+  padding: 1rem 2rem 2rem 2rem;
+}
+#profile .profile-inner .dashboard-menu #bulletsIcon {
+  padding-right: 10px;
+}
+#profile .profile-inner .dashboard-menu .hamburger_menu {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#profile .profile-inner .dashboard-menu .hamburger_menu:hover {
+  background: #00c386;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap {
+  position: relative;
+  display: none;
+  font-size: 0.8rem;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap iconify-icon {
+  padding-right: 10px;
+  color: black;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap iconify-icon:hover {
+  color: rgb(0, 203, 132);
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul {
+  padding: 15px;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li {
+  position: relative;
+  list-style: none;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 20px 25px;
+  width: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a:hover {
+  color: rgb(0, 203, 132);
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a:hover,
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a.active {
+  background: rgb(0, 203, 132);
+}
+#profile .profile-inner .dashboard-menu .dd_wrap:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #70ed8b transparent;
+  z-index: 1;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap.active {
+  display: block;
+}
+#profile .profile-inner .dashboard-menu .dd_menu {
+  position: absolute;
+  top: 0;
+  left: 115%;
+  width: 100%;
+  display: none;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a.active + .dd_menu {
+  display: block;
+  color: rgb(0, 203, 132);
+}
+#profile .profile-inner .dashboard-menu-expanded {
+  display: none;
+}
+
+.listHeadingContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0px 15px;
+}
+.listHeadingContainer iconify-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.listHeadingContainer h1 {
+  font-size: 30px;
+  font-family: "poppinssemibold";
+  margin-bottom: 0;
+}
+
+.cardsSection .cards {
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0px;
+}
+.cardsSection .cards .backgroundRectangle {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(0, 196, 128);
+}
+.cardsSection .cards .backgroundRectangle iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .backgroundRectangle1 {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(0, 206, 197);
+}
+.cardsSection .cards .backgroundRectangle1 iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .backgroundRectangle2 {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(0, 249, 191);
+}
+.cardsSection .cards .backgroundRectangle2 iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .backgroundRectangle3 {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(103, 165, 243);
+}
+.cardsSection .cards .backgroundRectangle3 iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .number {
+  margin: 0;
+  font-size: 22px;
+  font-family: "poppinssemibold";
+  color: black;
+  margin-bottom: 0;
+  color: black;
+}
+.cardsSection .cards p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+
+#charts .area-chart {
+  border: solid 1px #c2bebe;
+  border-radius: 20px;
+  padding-bottom: 3rem;
+  min-width: 320px;
+  max-width: 750px;
+}
+#charts .area-chart .area-chart-inner {
+  border-bottom: solid 1px #c2bebe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#charts .area-chart .area-chart-inner h2 {
+  padding: 1rem;
+  font-size: 25px;
+  font-family: "poppinssemibold";
+}
+#charts .area-chart .area-chart-inner a {
+  text-decoration: none;
+  color: #01bd82;
+}
+#charts .pie-chart {
+  border: solid 1px #c2bebe;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 750px;
+}
+#charts .pie-chart .pie-chart-inner {
+  border-bottom: solid 1px #c2bebe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#charts .pie-chart .pie-chart-inner h2 {
+  padding: 1rem;
+  font-size: 25px;
+  font-family: "poppinssemibold";
+}
+#charts .pie-chart .dropdown {
+  position: relative;
+  display: inline-block;
+}
+#charts .pie-chart .dropdown-btn {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 0.2rem;
+  margin-top: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #c2bebe;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+#charts .pie-chart .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+#charts .pie-chart .dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+#charts .pie-chart .dropdown-content a:hover {
+  background-color: #c2bebe;
+}
+#charts .pie-chart .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.leadsSectionDiv {
+  padding: 30px 15px;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 7px;
+  /* Table Styles */
+}
+.leadsSectionDiv .leads-viewAllButton #leads576-createleads-div {
+  display: flex;
+  flex-direction: column;
+}
+.leadsSectionDiv .leads-viewAllButton #leads576-createleads-div h2 {
+  font-size: 25px;
+  font-family: "poppinssemibold";
+  margin-bottom: 0;
+}
+.leadsSectionDiv .leads-viewAllButton #leads576-createleads-div button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  padding: 7px 0px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+}
+.leadsSectionDiv .leads-viewAllButton #leads576-createleads-div button:hover {
+  background-color: rgb(200, 197, 197);
+}
+.leadsSectionDiv .leads-viewAllButton .divisionLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(156, 154, 154);
+  margin: 15px 0px 0px;
+  display: none;
+}
+.leadsSectionDiv .search-sort-div {
+  padding: 20px 0px 30px;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  width: 100%;
+  height: 100%;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv .search-bar {
+  padding: 8px 28px 8px 10px;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+  border-radius: 12px;
+  width: 100%;
+  outline: none;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv #searchIcon {
+  position: relative;
+  right: 30px;
+  top: 12px;
+  font-size: 25px;
+  transform: translateY(-50%);
+  color: rgb(156, 154, 154);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv #searchIcon:hover {
+  color: #333;
+}
+.leadsSectionDiv .search-sort-div .dropdown {
+  width: 100%;
+  height: 100%;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: transparent;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 9px;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-toggle i {
+  margin-left: 10px;
+  display: none !important;
+  transition: transform 0.3s;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-content {
+  display: none;
+  flex-direction: column;
+  padding: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgb(0, 212, 129);
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 12px;
+  width: 100%;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(10px); /* Adjust the gap by changing the value here */
+  z-index: 1;
+}
+.leadsSectionDiv .search-sort-div .dropdown.active .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-content a:hover {
+  background: white;
+  color: rgb(156, 154, 154);
+}
+.leadsSectionDiv .search-sort-div .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  background: green;
+  margin: 0 auto;
+}
+.leadsSectionDiv .table-wrapper {
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+}
+.leadsSectionDiv .table-wrapper .fl-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  /* Responsive */
+}
+.leadsSectionDiv .table-wrapper .fl-table td, .leadsSectionDiv .table-wrapper .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+.leadsSectionDiv .table-wrapper .fl-table thead th {
+  color: black;
+  background: rgb(236, 249, 237);
+}
+.leadsSectionDiv .table-wrapper .fl-table thead th:nth-child(odd) {
+  color: black;
+  background: rgb(236, 249, 237);
+}
+.leadsSectionDiv .table-wrapper .fl-table .fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+.leadsSectionDiv .table-wrapper .fl-table tr:hover {
+  background: #f4f0f0;
+}
+.leadsSectionDiv .table-wrapper .fl-table p {
+  margin: 0;
+}
+@media (max-width: 850px) {
+  .leadsSectionDiv .table-wrapper .fl-table {
+    display: block;
+    width: 100%;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table::before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead, .leadsSectionDiv .table-wrapper .fl-table tbody, .leadsSectionDiv .table-wrapper .fl-table thead th {
+    display: block;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead {
+    float: left;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table td {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 220px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 170px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table h3 {
+    font-size: 18px;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody tr {
+    display: table-cell;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tr:nth-child(even) {
+    background: transparent;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tr td:nth-child(odd) {
+    background: #F8F8F8;
+    border-right: 1px solid #E6E4E4;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tr td:nth-child(even) {
+    border-right: 1px solid #E6E4E4;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody td {
+    display: block;
+    text-align: center;
+  }
+}
+.leadsSectionDiv .columnheading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.leadsSectionDiv .columnheading h3 {
+  font-size: 20px;
+}
+.leadsSectionDiv .columnheading .up-downArrows {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.leadsSectionDiv .columnheading .up-downArrows #upArrow {
+  font-size: 10px;
+  color: black;
+}
+.leadsSectionDiv .columnheading .up-downArrows #dropdownArrow {
+  font-size: 15px;
+  color: black;
+}
+.leadsSectionDiv .checkBox-leadName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.leadsSectionDiv .checkBox-leadName img {
+  width: 40px;
+  height: 40px;
+}
+.leadsSectionDiv .checkBox-leadName .personName-date-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.leadsSectionDiv .checkBox-leadName .personName-date-div .clockIcon-date-div {
+  display: flex;
+  align-items: center;
+}
+.leadsSectionDiv .email-telephone-common-div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.leadsSectionDiv .leadSourcebuttons {
+  background-color: rgb(195, 255, 244);
+  width: 100px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.leadsSectionDiv .leadStatusButtons {
+  background-color: rgb(195, 255, 244);
+  width: 100px;
+  padding: 3px;
+  border: 1px solid rgb(0, 212, 129);
+  border-radius: 15px;
+  color: rgb(0, 212, 129);
+}
+.leadsSectionDiv .leadStatusButtons1 {
+  background-color: rgb(199, 155, 156);
+  width: 140px;
+  padding: 3px;
+  border: 1px solid rgb(241, 21, 32);
+  border-radius: 15px;
+  color: rgb(241, 21, 32);
+}
+.leadsSectionDiv .leadStatusButtons2 {
+  background-color: rgb(217, 255, 222);
+  width: 140px;
+  padding: 3px;
+  border: 1px solid rgb(0, 192, 147);
+  border-radius: 15px;
+  color: rgb(0, 192, 147);
+}
+.leadsSectionDiv .writeOrDelete-div {
+  display: flex;
+  gap: 10px;
+}
+.leadsSectionDiv .writeOrDelete-div .actionIcon {
+  border: 1px solid rgb(156, 154, 154);
+  padding: 3px;
+}
+
+.next-prev-div {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 30px;
+}
+.next-prev-div button {
+  padding: 5px 30px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+}
+.next-prev-div button:hover {
+  background-color: rgb(0, 212, 129);
+  border: none;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  padding: 15px;
+  margin-top: 15px;
+}
+footer .footerContents {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+footer .footerContents .footerLogoContainer {
+  width: 100%;
+}
+footer .footerContents .footerLogoContainer img {
+  width: 170px;
+  height: 50px;
+}
+footer .footerContents .copyrightText {
+  width: 100%;
+}
+footer .footerContents .copyrightText p {
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+  color: white;
+}
+footer .footerContents .footerIconsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+footer .footerContents .footerIconsContainer i {
+  font-size: 25px;
+  color: white;
+}
+footer .footerContents .footerIconsContainer i:hover {
+  color: rgb(0, 203, 132);
+}
+
+.listings {
+  margin-top: 30px;
+  width: 100%;
+}
+.listings h1 {
+  font-family: "poppinsmedium";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.listings h1 #noteIcon {
+  font-size: 40px;
+  position: relative;
+  top: -5px;
+}
+.listings h6 {
+  margin-left: 14px;
+  color: #807D7D;
+  font-family: "poppinslight";
+}
+
+.listingsContainer {
+  padding: 35px 20px 20px;
+  width: 100%;
+  height: auto;
+  background-color: #F4FFF4;
+  border: 1px solid #C2BEBE;
+  border-radius: 15px;
+}
+
+.filter-btn {
+  border: none;
+  background-color: inherit;
+  color: #60B736;
+  margin-bottom: 15px;
+}
+
+.searchLeadsDiv {
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 15px;
+  width: 100%;
+}
+.searchLeadsDiv .search-bar {
+  padding: 8px 28px 8px 10px;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+  border-radius: 12px;
+  width: 100%;
+  outline: none;
+}
+.searchLeadsDiv #searchIcon {
+  position: relative;
+  right: 30px;
+  top: 12px;
+  font-size: 25px;
+  transform: translateY(-50%);
+  color: rgb(156, 154, 154);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.searchLeadsDiv #searchIcon:hover {
+  color: #333;
+}
+
+.custom-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.custom-select select {
+  padding: 10px 28px 8px 10px;
+  width: 100%;
+  border-radius: 12px;
+  height: auto;
+  border: 1px solid #C2BEBE;
+  outline: none;
+  color: #807D7D;
+  font-family: "poppinslight";
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+  display: none;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  color: grey;
+  top: 1px;
+  right: 16px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-btn button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  border: none;
+  padding: 12px 0px;
+  width: 200px;
+  border-radius: 5px;
+}
+.search-btn button:hover {
+  background-color: rgb(200, 197, 197);
+}
+
+select, option {
+  background: rgb(255, 255, 255) !important;
+}
+
+header .heading {
+  text-align: center;
+}
+header .heading h1 {
+  font-family: "poppinsbold";
+}
+header .heading p {
+  color: rgba(0, 0, 0, 0.57);
+}
+header .navigation {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .navigation .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .navigation .button-container .nav-button {
+  border-radius: 50%;
+  min-height: 2.7rem;
+  color: rgb(0, 195, 134);
+  min-width: 2.7rem;
+  border: 3px solid rgb(0, 195, 134);
+}
+header .navigation .button-container .active {
+  color: white;
+  background: rgb(0, 195, 134);
+}
+header .navigation .line {
+  background: rgba(0, 0, 0, 0.17);
+  height: 1px;
+  width: 1%;
+}
+
+form {
+  border: none;
+  background: none;
+}
+form .form-header {
+  width: 100%;
+  padding-top: 1em;
+  font-family: "poppinsbold";
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.basic-information {
+  width: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.basic-information .flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+}
+
+.property-information {
+  padding-bottom: 1em;
+  width: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.property-information .flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+}
+.property-information .input-container {
+  width: 100%;
+}
+
+.benefits .flex-container {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.benefits .flex-container .input-container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.benefits .flex-container .input-container label {
+  width: 90%;
+}
+.benefits .checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.button-container2 {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.button-container2 button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  padding: 7px 0px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+  width: 15%;
+  height: 3em;
+}
+.button-container2 button:hover {
+  background-color: rgb(200, 197, 197);
+}
+
+.reviewsMatrixSection .reviewsDiv {
+  padding: 20px 0px;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 7px;
+}
+.reviewsMatrixSection .reviewsDiv h4 {
+  font-size: 20px;
+  font-family: "poppinssemibold";
+  margin-left: 15px;
+}
+.reviewsMatrixSection .reviewsDiv .lineUnderReviewMatrics {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(156, 154, 154);
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection {
+  padding: 20px 30px 10px 30px;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .reviewsIconContainers {
+  padding: 15px;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .reviewsIconContainers .sameFontSize {
+  font-size: 70px;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .cardsTextContainer p {
+  margin: 0;
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .cardsTextContainer .number {
+  margin: 0;
+  font-size: 22px;
+  font-family: "poppinssemibold";
+  color: black;
+}
+
+.userReviewsSection .userReviewsDiv {
+  padding: 20px 0px;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 7px;
+}
+.userReviewsSection .userReviewsDiv h4 {
+  font-size: 20px;
+  font-family: "poppinssemibold";
+  margin-left: 20px;
+}
+.userReviewsSection .userReviewsDiv .lineUnderReviewMatrics {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(156, 154, 154);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas {
+  padding: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas p {
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv {
+  background-color: rgba(0, 195, 133, 0.1333333333);
+  padding: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div img {
+  width: 55px;
+  height: 55px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div .herName-daysAgo-div .herName {
+  color: black;
+  font-family: "poppinssemibold";
+  font-size: 17px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div .herName-daysAgo-div p {
+  margin: 0;
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .fiveStarDiv iconify-icon {
+  font-size: 20px;
+  color: rgb(0, 203, 132);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .reviewBoilersText {
+  font-family: "poppinsmedium";
+  font-size: 15px;
+  color: rgb(156, 154, 154);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .reviewBoilersText span {
+  color: black;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv img {
+  width: 300px;
+  height: 300px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  padding: 7px 0px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(132, 238, 204);
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div button:hover {
+  background-color: rgb(200, 197, 197);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div button iconify-icon {
+  color: rgb(0, 203, 132);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div .reportDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div .reportDiv iconify-icon {
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div .reportDiv p {
+  margin: 0;
+  font-size: 17px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form {
+  box-shadow: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form input {
+  padding: 5px 0px 15px 15px;
+  width: 85%;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form button {
+  width: 15%;
+  height: 45px;
+  margin-left: 12px;
+  background-color: rgb(132, 238, 204);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaTopLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(156, 154, 154);
+  margin: 15px 0px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0px 0px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div button {
+  padding: 5px 30px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div button:hover {
+  background-color: rgb(0, 212, 129);
+  border: none;
+  color: white;
+}
+
+.hide {
+  display: none !important;
+}
+
+.form {
+  border-radius: 17px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 98vw;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.error-container {
+  width: 100%;
+}
+.error-container span {
+  color: red;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas {
+    padding: 20px 20px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv {
+    padding: 20px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv {
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv img {
+    width: 220px;
+    height: 220px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form {
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div button {
+    margin-left: 10px;
+  }
+}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .error-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .error-container span {
+    color: red;
+    width: 100%;
+  }
+  .error-container label {
+    width: 47%;
+  }
+  #form .form {
+    width: 90vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+  }
+  #form span {
+    color: red;
+  }
+  #form .basic-information .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  header nav img {
+    width: 220px;
+    height: 70px;
+  }
+  header nav .hamMenu-navIcons-pImage {
+    gap: 20px;
+  }
+  header nav .hamMenu-navIcons-pImage .dropdown-container .dropdown-content {
+    width: 95px;
+  }
+  header .overlay .overlay-content ul li a {
+    font-size: 30px;
+  }
+  header .overlay .closebtn {
+    font-size: 60px;
+  }
+  #profile .profile-inner .profile-btns {
+    display: flex;
+    align-items: center;
+  }
+  #profile .profile-inner .dashboard-menu {
+    display: none;
+  }
+  #profile .profile-inner .dashboard-menu-expanded {
+    display: block;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu iconify-icon {
+    padding-right: 0.2rem;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul a {
+    text-decoration: none;
+    color: #000;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul .dd_menu {
+    display: none;
+  }
+  .leadsSectionDiv .leads-viewAllButton #leads576-createleads-div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .leadsSectionDiv .leads-viewAllButton .divisionLine {
+    display: flex;
+  }
+  footer {
+    padding: 15px;
+  }
+  footer .footerContents {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 0;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas {
+    padding: 20px 20px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv {
+    padding: 20px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv {
+    justify-content: start;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form {
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form input {
+    width: 90%;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form button {
+    width: 10%;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div button {
+    margin-left: 10px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  header .overlay .overlay-content ul li a {
+    font-size: 27px;
+  }
+  header .overlay .closebtn {
+    font-size: 60px;
+  }
+  #profile .dd_wrap li {
+    list-style: none;
+  }
+  .leadsSectionDiv .leads-viewAllButton #leads576-createleads-div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .leadsSectionDiv .leads-viewAllButton .divisionLine {
+    display: flex;
+  }
+  .reviewsCardsSection {
+    padding: 0px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas {
+    padding: 30px 30px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv {
+    padding: 30px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv {
+    justify-content: start;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form {
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form input {
+    width: 90%;
+    outline: none;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form button {
+    width: 10%;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form button:hover {
+    background-color: rgb(200, 197, 197);
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div button {
+    margin-left: 10px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  section {
+    padding: 30px 60px;
+  }
+  header {
+    padding: 30px 60px;
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav .hamMenu-navIcons-pImage {
+    gap: 20px;
+  }
+  header nav .hamMenu-navIcons-pImage .toggle-button {
+    display: none;
+  }
+  header nav .hamMenu-navIcons-pImage .darkModeIconContainer {
+    display: flex;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul {
+    gap: 6rem;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul li {
+    list-style: none;
+  }
+  .listHeadingContainer {
+    padding: 0px 60px;
+  }
+  .leadsSectionDiv .leads-viewAllButton #leads576-createleads-div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .leadsSectionDiv .leads-viewAllButton .divisionLine {
+    display: flex;
+  }
+  .leadsSectionDiv .search-sort-div {
+    padding: 20px 0px 30px;
+  }
+  .leadsSectionDiv .search-sort-div .searchLeadsDiv {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .leadsSectionDiv .search-sort-div .searchLeadsDiv .search-bar {
+    padding: 8px 28px 8px 10px;
+    border: 1px solid rgb(156, 154, 154);
+    color: rgb(156, 154, 154);
+    border-radius: 12px;
+    width: 100%;
+    outline: none;
+  }
+  .leadsSectionDiv .search-sort-div .searchLeadsDiv #searchIcon {
+    position: relative;
+    right: 30px;
+    top: 12px;
+    font-size: 25px;
+    transform: translateY(-50%);
+    color: rgb(156, 154, 154);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .leadsSectionDiv .search-sort-div .searchLeadsDiv #searchIcon:hover {
+    color: #333;
+  }
+  .leadsSectionDiv .search-sort-div .dropdown {
+    width: 100%;
+    height: 100%;
+  }
+  .leadsSectionDiv .search-sort-div .dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: transparent;
+    border: 1px solid rgb(156, 154, 154);
+    color: rgb(156, 154, 154);
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 9px;
+  }
+  .leadsSectionDiv .search-sort-div .dropdown .dropdown-toggle i {
+    margin-left: 10px;
+    display: none !important;
+    transition: transform 0.3s;
+  }
+  .leadsSectionDiv .search-sort-div .dropdown .dropdown-content {
+    display: none;
+    flex-direction: column;
+    padding: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(0, 212, 129);
+    border: 1px solid rgb(156, 154, 154);
+    border-radius: 12px;
+    width: 100%;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(10px); /* Adjust the gap by changing the value here */
+    z-index: 1;
+  }
+  .leadsSectionDiv .search-sort-div .dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .leadsSectionDiv .search-sort-div .dropdown .dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .leadsSectionDiv .search-sort-div .dropdown .dropdown-content a:hover {
+    background: white;
+    color: rgb(156, 154, 154);
+  }
+  .leadsSectionDiv .search-sort-div .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    background: green;
+    margin: 0 auto;
+  }
+  footer {
+    padding: 30px 60px 20px 60px;
+    margin-top: 35px;
+    align-items: center;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas {
+    padding: 30px 30px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv {
+    padding: 50px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv {
+    justify-content: start;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form {
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form input {
+    width: 94%;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv form button {
+    width: 6%;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .userReviewsSection .userReviewsDiv .divsContainingTheresas .showingEntries-nextPrev-div button {
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,27 @@
+<iconify-icon id="dropdownArrow" icon="iconamoon:arrow-down-2-thin"></iconify-icon>
+<iconify-icon id="changeModeIcon" icon="iconamoon:mode-light-thin"></iconify-icon>
+<iconify-icon id="notificationIcon" icon="ic:outline-notifications"></iconify-icon>
+<iconify-icon id="menuGridIcon" icon="gg:menu-grid-o"></iconify-icon>
+<iconify-icon id="houseIcon" icon="bi:house"></iconify-icon>
+<iconify-icon id="noteIcon" icon="fluent:notepad-28-regular"></iconify-icon>
+<iconify-icon id="leadIcon" icon="arcticons:magnetometer"></iconify-icon>
+<iconify-icon id="earningsIcon" icon="bi:graph-up-arrow"></iconify-icon>
+<iconify-icon id="reviewsIcon" icon="iconamoon:star-thin"></iconify-icon>
+<iconify-icon id="settings" icon="arcticons:settings"></iconify-icon>
+<iconify-icon id="bulletsIcon" icon="ph:list-bullets-thin"></iconify-icon>
+<iconify-icon id="connectionIcon" icon="fluent:connected-20-filled"></iconify-icon>
+<iconify-icon id="incomingCall" icon="codicon:call-incoming"></iconify-icon>
+<iconify-icon id="reviewsIcon" icon="iconamoon:star-thin"></iconify-icon>
+<iconify-icon id="upArrow" icon="ep:arrow-up"></iconify-icon>
+<iconify-icon id="messageIcon" icon="ep:message"></iconify-icon>
+<iconify-icon id="telephoneIcon" icon="ph:phone-thin"></iconify-icon>
+<iconify-icon id="clockIcon" icon="ph:clock-thin"></iconify-icon>
+<iconify-icon id="searchIcon" icon="ei:search"></iconify-icon>
+<iconify-icon id="writingIcon" icon="streamline:interface-edit-write-2-change-document-edit-modify-paper-pencil-write-writing"></iconify-icon>
+<iconify-icon id="deleteIcon" icon="material-symbols:delete-outline"></iconify-icon>
+<iconify-icon id="longUpArrow" icon="ph:arrow-up-thin"></iconify-icon>
+<iconify-icon id="verticalDots" icon="ph:dots-three-vertical"></iconify-icon>
+<iconify-icon id="blueTrophy" icon="bi:trophy" style="color: #4799fb;"></iconify-icon>
+<iconify-icon id="yellowStar" icon="iconamoon:star-light" style="color: #ffca0d;"></iconify-icon>
+<iconify-icon id="errorIcon" icon="bx:error" style="color: #d80808;"></iconify-icon>
+<iconify-icon id="filledGreenStar" icon="ion:star" style="color: #06ba93;"></iconify-icon>

@@ -1,0 +1,983 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 30px 15px;
+}
+
+#profile {
+  padding: 1rem 1rem;
+}
+#profile .profile-inner {
+  background-color: rgba(0, 195, 133, 0.1333333333);
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 15px;
+}
+#profile .profile-inner .avatar {
+  padding: 1rem 0 0 2rem;
+}
+#profile .profile-inner .greetings {
+  padding: 1rem 0 0 2rem;
+}
+#profile .profile-inner .greetings h1 {
+  font-size: 30px;
+  font-family: "poppinssemibold";
+}
+#profile .profile-inner .greetings h1 span {
+  font-family: "poppinsregular";
+}
+#profile .profile-inner .addNewListing {
+  padding: 1rem 2rem 0 2rem;
+  margin-left: auto;
+}
+#profile .profile-inner .addNewListing button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  border: none;
+  padding: 12px 0px;
+  width: 200px;
+  border-radius: 5px;
+}
+#profile .profile-inner .dashboard-menu {
+  padding: 1rem 2rem 2rem 2rem;
+}
+#profile .profile-inner .dashboard-menu #bulletsIcon {
+  padding-right: 10px;
+}
+#profile .profile-inner .dashboard-menu .hamburger_menu {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#profile .profile-inner .dashboard-menu .hamburger_menu:hover {
+  background: #00c386;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap {
+  position: relative;
+  display: none;
+  font-size: 0.8rem;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap iconify-icon {
+  padding-right: 10px;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul {
+  padding: 15px;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li {
+  position: relative;
+  list-style: none;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 20px 25px;
+  width: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a:hover,
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a.active {
+  background: #70ed8b;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #70ed8b transparent;
+  z-index: 1;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap.active {
+  display: block;
+}
+#profile .profile-inner .dashboard-menu .dd_menu {
+  position: absolute;
+  top: 0;
+  left: 115%;
+  width: 100%;
+  display: none;
+}
+#profile .profile-inner .dashboard-menu .dd_wrap ul li a.active + .dd_menu {
+  display: block;
+}
+#profile .profile-inner .dashboard-menu-expanded {
+  display: none;
+}
+
+.listHeadingContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 4px;
+}
+.listHeadingContainer iconify-icon {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.listHeadingContainer h1 {
+  font-size: 30px;
+  font-family: "poppinssemibold";
+  margin-bottom: 0;
+}
+
+.cardsSection {
+  padding: 0px 15px;
+}
+.cardsSection .cards {
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0px;
+}
+.cardsSection .cards .backgroundRectangle {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(0, 196, 128);
+}
+.cardsSection .cards .backgroundRectangle iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .backgroundRectangle1 {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(0, 206, 197);
+}
+.cardsSection .cards .backgroundRectangle1 iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .backgroundRectangle2 {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(0, 249, 191);
+}
+.cardsSection .cards .backgroundRectangle2 iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .backgroundRectangle3 {
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(103, 165, 243);
+}
+.cardsSection .cards .backgroundRectangle3 iconify-icon {
+  font-size: 30px;
+  color: white;
+  font-weight: 400;
+}
+.cardsSection .cards .number {
+  margin: 0;
+  font-size: 22px;
+  font-family: "poppinssemibold";
+  color: black;
+  margin-bottom: 0;
+  color: black;
+}
+.cardsSection .cards p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+
+#charts .area-chart {
+  border: solid 1px #c2bebe;
+  border-radius: 20px;
+  padding-bottom: 3rem;
+  min-width: 320px;
+  max-width: 750px;
+}
+#charts .area-chart .area-chart-inner {
+  border-bottom: solid 1px #c2bebe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#charts .area-chart .area-chart-inner h2 {
+  padding: 1rem;
+  font-size: 25px;
+  font-family: "poppinssemibold";
+}
+#charts .area-chart .area-chart-inner a {
+  text-decoration: none;
+  color: #01bd82;
+}
+#charts .pie-chart {
+  border: solid 1px #c2bebe;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 750px;
+}
+#charts .pie-chart .pie-chart-inner {
+  border-bottom: solid 1px #c2bebe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#charts .pie-chart .pie-chart-inner h2 {
+  padding: 1rem;
+  font-size: 25px;
+  font-family: "poppinssemibold";
+}
+#charts .pie-chart .dropdown {
+  position: relative;
+  display: inline-block;
+}
+#charts .pie-chart .dropdown-btn {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 0.2rem;
+  margin-top: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #c2bebe;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+#charts .pie-chart .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+#charts .pie-chart .dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+#charts .pie-chart .dropdown-content a:hover {
+  background-color: #c2bebe;
+}
+#charts .pie-chart .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.leadsSectionDiv {
+  padding: 30px 15px;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 7px;
+  /* Table Styles */
+}
+.leadsSectionDiv .leads-viewAllButton {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.leadsSectionDiv .leads-viewAllButton h2 {
+  font-size: 25px;
+  font-family: "poppinssemibold";
+}
+.leadsSectionDiv .leads-viewAllButton button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  padding: 7px 0px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+}
+.leadsSectionDiv .leads-createDateSection {
+  margin-top: 20px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.leadsSectionDiv .leads-createDateSection .allLeads-createDate-div {
+  display: flex;
+}
+.leadsSectionDiv .leads-createDateSection .allLeads-createDate-div .commonDiv {
+  padding: 15px;
+  border: 1px solid rgb(98, 95, 95);
+  border-radius: 5px;
+}
+.leadsSectionDiv .leads-createDateSection .allLeads-createDate-div .commonDiv .text-downArrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.leadsSectionDiv .search-sort-div {
+  padding: 20px 0px 30px;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  width: 100%;
+  height: 100%;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv .search-bar {
+  padding: 8px 28px 8px 10px;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+  border-radius: 12px;
+  width: 100%;
+  outline: none;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv #searchIcon {
+  position: relative;
+  right: 30px;
+  top: 12px;
+  font-size: 25px;
+  transform: translateY(-50%);
+  color: rgb(156, 154, 154);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.leadsSectionDiv .search-sort-div .searchLeadsDiv #searchIcon:hover {
+  color: #333;
+}
+.leadsSectionDiv .search-sort-div .dropdown {
+  width: 100%;
+  height: 100%;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: transparent;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 9px;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-toggle i {
+  margin-left: 10px;
+  display: none !important;
+  transition: transform 0.3s;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-content {
+  display: none;
+  flex-direction: column;
+  padding: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  background: rgb(0, 212, 129);
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 12px;
+  width: 305px;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(10px); /* Adjust the gap by changing the value here */
+  z-index: 1;
+}
+.leadsSectionDiv .search-sort-div .dropdown.active .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.leadsSectionDiv .search-sort-div .dropdown .dropdown-content a:hover {
+  background: white;
+  color: rgb(156, 154, 154);
+}
+.leadsSectionDiv .search-sort-div .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  background: green;
+  margin: 0 auto;
+}
+.leadsSectionDiv .table-wrapper {
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+.leadsSectionDiv .table-wrapper .fl-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  /* Responsive */
+}
+.leadsSectionDiv .table-wrapper .fl-table td, .leadsSectionDiv .table-wrapper .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+.leadsSectionDiv .table-wrapper .fl-table thead th {
+  color: black;
+  background: rgb(236, 249, 237);
+}
+.leadsSectionDiv .table-wrapper .fl-table thead th:nth-child(odd) {
+  color: black;
+  background: rgb(236, 249, 237);
+}
+.leadsSectionDiv .table-wrapper .fl-table .fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+.leadsSectionDiv .table-wrapper .fl-table tr:hover {
+  background: #F8F8F8;
+}
+.leadsSectionDiv .table-wrapper .fl-table p {
+  margin: 0;
+}
+@media (max-width: 850px) {
+  .leadsSectionDiv .table-wrapper .fl-table {
+    display: block;
+    width: 100%;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table::before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead, .leadsSectionDiv .table-wrapper .fl-table tbody, .leadsSectionDiv .table-wrapper .fl-table thead th {
+    display: block;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead {
+    float: left;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table td {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 220px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 170px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table h3 {
+    font-size: 18px;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody tr {
+    display: table-cell;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tr:nth-child(even) {
+    background: transparent;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tr td:nth-child(odd) {
+    background: #F8F8F8;
+    border-right: 1px solid #E6E4E4;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tr td:nth-child(even) {
+    border-right: 1px solid #E6E4E4;
+  }
+  .leadsSectionDiv .table-wrapper .fl-table tbody td {
+    display: block;
+    text-align: center;
+  }
+}
+.leadsSectionDiv .columnheading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.leadsSectionDiv .columnheading h3 {
+  font-size: 20px;
+}
+.leadsSectionDiv .columnheading .up-downArrows {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.leadsSectionDiv .columnheading .up-downArrows #upArrow {
+  font-size: 10px;
+  color: black;
+}
+.leadsSectionDiv .columnheading .up-downArrows #dropdownArrow {
+  font-size: 15px;
+  color: black;
+}
+.leadsSectionDiv .checkBox-leadName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.leadsSectionDiv .checkBox-leadName img {
+  width: 40px;
+  height: 40px;
+}
+.leadsSectionDiv .checkBox-leadName .personName-date-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.leadsSectionDiv .checkBox-leadName .personName-date-div .clockIcon-date-div {
+  display: flex;
+  align-items: center;
+}
+.leadsSectionDiv .email-telephone-common-div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.leadsSectionDiv .leadSourcebuttons {
+  background-color: rgb(195, 255, 244);
+  width: 100px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.leadsSectionDiv .leadStatusButtons {
+  background-color: rgb(195, 255, 244);
+  width: 100px;
+  padding: 3px;
+  border: 1px solid rgb(0, 212, 129);
+  border-radius: 15px;
+  color: rgb(0, 212, 129);
+}
+.leadsSectionDiv .leadStatusButtons1 {
+  background-color: rgb(199, 155, 156);
+  width: 140px;
+  padding: 3px;
+  border: 1px solid rgb(241, 21, 32);
+  border-radius: 15px;
+  color: rgb(241, 21, 32);
+}
+.leadsSectionDiv .leadStatusButtons2 {
+  background-color: rgb(217, 255, 222);
+  width: 140px;
+  padding: 3px;
+  border: 1px solid rgb(0, 192, 147);
+  border-radius: 15px;
+  color: rgb(0, 192, 147);
+}
+.leadsSectionDiv .writeOrDelete-div {
+  display: flex;
+  gap: 10px;
+}
+.leadsSectionDiv .writeOrDelete-div .actionIcon {
+  border: 1px solid gray;
+  padding: 3px;
+}
+
+.next-prev-div {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 30px;
+}
+.next-prev-div button {
+  padding: 5px 30px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 154, 154);
+  color: rgb(156, 154, 154);
+}
+.next-prev-div button:hover {
+  background-color: rgb(0, 212, 129);
+  border: none;
+  color: white;
+}
+
+.reviewsMatrixSection .reviewsDiv {
+  padding: 20px 0px;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 7px;
+}
+.reviewsMatrixSection .reviewsDiv h4 {
+  font-size: 20px;
+  font-family: "poppinssemibold";
+  margin-left: 15px;
+}
+.reviewsMatrixSection .reviewsDiv .lineUnderReviewMatrics {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(156, 154, 154);
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection {
+  padding: 30px 0px;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .reviewsIconContainers {
+  padding: 15px;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .reviewsIconContainers .sameFontSize {
+  font-size: 70px;
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .cardsTextContainer p {
+  margin: 0;
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+.reviewsMatrixSection .reviewsDiv .reviewsCardsSection .cards .cardsTextContainer .number {
+  margin: 0;
+  font-size: 22px;
+  font-family: "poppinssemibold";
+  color: black;
+}
+
+.userReviewsSection .userReviewsDiv {
+  padding: 20px 0px;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 7px;
+}
+.userReviewsSection .userReviewsDiv h4 {
+  font-size: 20px;
+  font-family: "poppinssemibold";
+  margin-left: 20px;
+}
+.userReviewsSection .userReviewsDiv .lineUnderReviewMatrics {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(156, 154, 154);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas {
+  padding: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas p {
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv {
+  background-color: rgba(0, 195, 133, 0.1333333333);
+  padding: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div img {
+  width: 55px;
+  height: 55px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div .herName-daysAgo-div .herName {
+  color: black;
+  font-family: "poppinssemibold";
+  font-size: 17px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .theresaProfile-div .herName-daysAgo-div p {
+  margin: 0;
+  font-size: 14px;
+  font-family: "poppinsregular";
+  color: rgb(98, 95, 95);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .theresaLane-5stars-div .fiveStarDiv iconify-icon {
+  font-size: 20px;
+  color: rgb(0, 203, 132);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .reviewBoilersText {
+  font-family: "poppinsmedium";
+  font-size: 15px;
+  color: rgb(156, 154, 154);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .reviewBoilersText span {
+  color: black;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .boilerImageDiv img {
+  width: 300px;
+  height: 300px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  padding: 7px 0px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(132, 238, 204);
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div button iconify-icon {
+  color: rgb(0, 203, 132);
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div .reportDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .replyButton-report-div .reportDiv p {
+  margin: 0;
+}
+.userReviewsSection .userReviewsDiv .divsContainingTheresas .theresaLaneDiv .addComment-sendButton {
+  background-color: transparent;
+}
+
+select, option {
+  background: rgb(255, 255, 255) !important;
+}
+
+header .heading {
+  text-align: center;
+}
+header .heading h1 {
+  font-family: "poppinsbold";
+}
+header .heading p {
+  color: rgba(0, 0, 0, 0.57);
+}
+header .navigation {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .navigation .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .navigation .button-container .nav-button {
+  border-radius: 50%;
+  min-height: 2.7rem;
+  color: rgb(0, 195, 134);
+  min-width: 2.7rem;
+  border: 3px solid rgb(0, 195, 134);
+}
+header .navigation .button-container .active {
+  color: white;
+  background: rgb(0, 195, 134);
+}
+header .navigation .line {
+  display: none;
+  background: rgba(0, 0, 0, 0.17);
+  height: 1px;
+  width: 5em;
+}
+
+form {
+  border: none;
+  border-radius: 17px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  background: rgb(255, 255, 255);
+}
+form .form-header {
+  width: 100%;
+  padding-top: 1em;
+  font-family: "poppinsbold";
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.basic-information {
+  width: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.basic-information .flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+}
+
+.property-information {
+  padding-bottom: 1em;
+  width: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.property-information .flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+}
+.property-information .input-container {
+  width: 100%;
+}
+
+.benefits .flex-container {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.benefits .flex-container .input-container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.benefits .flex-container .input-container label {
+  width: 90%;
+}
+.benefits .checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.button-container2 button {
+  font-size: 17px;
+  font-family: "poppinsregular";
+  color: white;
+  background-color: rgb(0, 203, 132);
+  padding: 7px 0px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  #profile .profile-inner .profile-btns {
+    display: flex;
+    align-items: center;
+  }
+  #profile .profile-inner .dashboard-menu {
+    display: none;
+  }
+  #profile .profile-inner .dashboard-menu-expanded {
+    display: block;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu iconify-icon {
+    padding-right: 0.2rem;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul a {
+    text-decoration: none;
+    color: #000;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul .dd_menu {
+    display: none;
+  }
+  .leads-viewAllButton {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #profile .dd_wrap li {
+    list-style: none;
+  }
+  .leads-viewAllButton {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul {
+    gap: 6rem;
+  }
+  #profile .profile-inner .dashboard-menu-expanded .menu .dd_wrap ul li {
+    list-style: none;
+  }
+  .leads-viewAllButton {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=styles.css.map */

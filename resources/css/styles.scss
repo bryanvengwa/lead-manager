@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+select , option{background: rgba(255, 255, 255, 1) !important;  }
+body{
+    background: rgba(250, 251, 250, 1);
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.pc-nav{
+    display: none;
+}
+.mobile-nav{ display: block; display: flex; width: 100vw; justify-content: space-between;
+    ul{display: flex; list-style: none;}
+
+}
+header{
+    .heading{
+        text-align: center;
+        h1{font-family: 'poppinsbold';}
+        p{color: rgba(0, 0, 0, 0.57);}
+
+}
+.navigation{ display: flex;  width: 100vw; justify-content: center; justify-content: space-evenly; align-items: center;
+    .button-container{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+                .nav-button{
+        border-radius:50%;
+        min-height: 2.7rem;
+        color: rgba(0, 195, 134, 1);
+
+        min-width: 2.7rem;
+        border: 3px solid rgba(0, 195, 134, 1)
+
+    }
+    .active{   color: white;    background: rgba(0, 195, 134, 1);}
+    }
+    .line{display: none; background: rgba(0, 0, 0, 0.17); height: 1px; width: 5em;}
+
+}
+
+}
+
+form{border: none; border-radius: 17px; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);background: rgba(255, 255, 255, 1); 
+    .form-header{ width: 100%;
+        padding-top: 1em;
+        font-family: 'poppinsbold';
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+         align-items: center;
+         align-self: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    }
+}
+.basic-information{  width: 100%; gap: 1em; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    .flex-container{ display: flex;   flex-direction: column;
+         gap: 1em;
+        width: 90%;
+    }
+
+}
+
+.property-information{ padding-bottom: 1em; width: 100%; gap: 1em; display: flex; flex-direction: column; justify-content: center; align-items: center;
+        .flex-container{ display: flex;   flex-direction: column;
+         gap: 1em;
+        width: 90%;
+    }
+    .input-container{width: 100%;}
+
+}
+
+.benefits{
+    .flex-container{width: 100%;  display: flex; gap: 1em; flex-direction: column; justify-content: center;  align-items: center;
+    .input-container{width: 95%; display: flex; justify-content: center;  align-items: center;
+        label{width: 90%; }
+    justify-content: space-between;
+
+    }
+    }
+        .checkbox{height: 1.5rem;
+    width:  1.5rem;
+    }
+}
+// footer style
+
+footer{
+  position: fixed;
+  background: black;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+  left: 0;
+}
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.logo-details{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 15px;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #00C386;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #00C386;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background: #00C386;
+}
+.top .media-icons a:nth-child(2):hover{
+  color: #00C386;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #00C386;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #00C386;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+header{
+        .navigation{
+        .line{display: block; width: 6.5em;}
+    }
+}
+    .basic-information{ padding-bottom: 2em;  width: 100%; gap: 1em; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    .flex-container{  flex-direction: row;
+         gap: 1em;
+        width: 90%;
+         
+    }
+
+}
+
+}
+.button-container2{ display: flex; justify-content: center; align-items: center; width: 100%;
+    .submit-button{background-color: rgba(0, 195, 134, 1); color: white; padding: 1.2em 2.8em; width: 80%; border-radius: 10px;
+
+}
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+ 
+    .mobile-nav{display: none;}
+    .pc-nav{ display: block; height: 5rem; margin-top: 1rem;
+    display: flex; width: 100vw;
+    align-items: center;
+
+    .img-container{
+        height: 100%;
+    }
+   
+    justify-content: space-around;
+    ul{display: flex;  gap: 2em; list-style: none;
+        .menu-container{
+            position: relative;
+           
+        }
+        li{ 
+            .menu-button2{cursor: pointer;   position: relative;}
+     
+              .small-menu2 {
+                 display: block ; display: flex; 
+                      position: absolute;
+                    gap: 0.4em;
+        flex-direction: column;
+
+              }    .small-menu{ display: block ; display: flex; 
+                      position: absolute;
+                    left: -2rem;
+                    //   li{background: black;}
+                    gap: 0.4em;
+        flex-direction: column;
+         
+    }
+            a{text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+             color: black;
+            }
+        }
+    }}
+    .property-information{
+    .flex-containers{  flex-direction: row; align-items: center; justify-content: center; 
+    .input-container{width: 50%; }
+    }
+      
+}
+}
+           .hide{
+        display: none !important;
+    }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    header{
+        .navigation{
+        .line{display: block; width: 14em;}
+    }
+}
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) {}

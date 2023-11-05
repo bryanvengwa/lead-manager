@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+select, option {
+  background: rgb(255, 255, 255) !important;
+}
+
+body {
+  background: rgb(250, 251, 250);
+}
+
+.pc-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: block;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+.mobile-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header .heading {
+  text-align: center;
+}
+header .heading h1 {
+  font-family: "poppinsbold";
+}
+header .heading p {
+  color: rgba(0, 0, 0, 0.57);
+}
+header .navigation {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .navigation .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .navigation .button-container .nav-button {
+  border-radius: 50%;
+  min-height: 2.7rem;
+  color: rgb(0, 195, 134);
+  min-width: 2.7rem;
+  border: 3px solid rgb(0, 195, 134);
+}
+header .navigation .button-container .active {
+  color: white;
+  background: rgb(0, 195, 134);
+}
+header .navigation .line {
+  display: none;
+  background: rgba(0, 0, 0, 0.17);
+  height: 1px;
+  width: 5em;
+}
+
+form {
+  border: none;
+  border-radius: 17px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  background: rgb(255, 255, 255);
+}
+form .form-header {
+  width: 100%;
+  padding-top: 1em;
+  font-family: "poppinsbold";
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.basic-information {
+  width: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.basic-information .flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+}
+
+.property-information {
+  padding-bottom: 1em;
+  width: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.property-information .flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 90%;
+}
+.property-information .input-container {
+  width: 100%;
+}
+
+.benefits .flex-container {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.benefits .flex-container .input-container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.benefits .flex-container .input-container label {
+  width: 90%;
+}
+.benefits .checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+footer {
+  position: fixed;
+  background: black;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+  left: 0;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+
+footer .content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.logo-details {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.content .top .logo-details {
+  color: #fff;
+  font-size: 15px;
+}
+
+.content .top .media-icons {
+  display: flex;
+}
+
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.top .media-icons a:nth-child(1) {
+  background: #00C386;
+}
+
+.top .media-icons a:nth-child(1):hover {
+  color: #00C386;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(2) {
+  background: #00C386;
+}
+
+.top .media-icons a:nth-child(2):hover {
+  color: #00C386;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(3) {
+  background: #00C386;
+}
+
+.top .media-icons a:nth-child(3):hover {
+  color: #E1306C;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(4) {
+  background: #00C386;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  header .navigation .line {
+    display: block;
+    width: 6.5em;
+  }
+  .basic-information {
+    padding-bottom: 2em;
+    width: 100%;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .basic-information .flex-container {
+    flex-direction: row;
+    gap: 1em;
+    width: 90%;
+  }
+}
+.button-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.button-container2 .submit-button {
+  background-color: rgb(0, 195, 134);
+  color: white;
+  padding: 1.2em 2.8em;
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .mobile-nav {
+    display: none;
+  }
+  .pc-nav {
+    display: block;
+    height: 5rem;
+    margin-top: 1rem;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .pc-nav .img-container {
+    height: 100%;
+  }
+  .pc-nav ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+  }
+  .pc-nav ul .menu-container {
+    position: relative;
+  }
+  .pc-nav ul li .menu-button2 {
+    cursor: pointer;
+    position: relative;
+  }
+  .pc-nav ul li .small-menu2 {
+    display: block;
+    display: flex;
+    position: absolute;
+    gap: 0.4em;
+    flex-direction: column;
+  }
+  .pc-nav ul li .small-menu {
+    display: block;
+    display: flex;
+    position: absolute;
+    left: -2rem;
+    gap: 0.4em;
+    flex-direction: column;
+  }
+  .pc-nav ul li a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: black;
+  }
+  .property-information .flex-containers {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .property-information .flex-containers .input-container {
+    width: 50%;
+  }
+}
+.hide {
+  display: none !important;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  header .navigation .line {
+    display: block;
+    width: 14em;
+  }
+}
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+/* Set width to make card deck cards 100% width *//*# sourceMappingURL=styles.css.map */

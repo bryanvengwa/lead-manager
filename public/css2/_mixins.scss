@@ -1,0 +1,104 @@
+
+
+
+@mixin h1{
+    font-size: 30px;
+    font-family: 'poppinssemibold';
+}
+@mixin h2{
+    font-size: 25px;
+    font-family: 'poppinssemibold';
+}
+@mixin h3{
+    font-size: 20px;
+    font-family: 'poppinssemibold';
+}
+@mixin h4{
+    font-size: 20px;
+    font-family: 'poppinssemibold';
+}
+@mixin navlinks{
+    font-size: 20px;
+    font-family: 'poppinsmedium';
+}
+@mixin blackPtext{
+    font-size: 14px;
+    font-family: 'poppinsregular';
+    color: black;
+}
+@mixin greyPtext{
+    font-size: 14px;
+    font-family: 'poppinsregular';
+    color: rgb(98, 95, 95);
+}
+@mixin longButtons{
+    font-size: 17px;
+    font-family: 'poppinsregular';
+    color: white;
+    background-color: rgb(0, 203, 132);
+    border: none;
+    padding: 12px 0px;
+    width: 200px;
+    border-radius: 5px;
+}
+@mixin shortButtons{
+    font-size: 17px;
+    font-family: 'poppinsregular';
+    color: white;
+    background-color: rgb(0, 203, 132);
+    padding: 7px 0px;
+    width: 140px;
+    border: none;
+    border-radius: 5px;
+}
+@mixin listHeadingContainer{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 4px;
+    iconify-icon{
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+    h1{
+      @include h1;
+      margin-bottom: 0;
+    }
+}
+@mixin backgroundRectangles{
+    padding: 20px 25px;
+    border-radius: 15px;
+    iconify-icon{
+        font-size: 30px;
+        color: white;
+        font-weight: 400;
+    }
+}
+@mixin number{
+    margin: 0;
+    font-size: 22px;
+    font-family: 'poppinssemibold';
+    color: black;
+}
+@mixin widthHeight100{
+    width: 100%;
+    height: 100%;
+}
+@mixin flex-jc-ac-widthHeight100{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+@mixin flex-jc-ac{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-ac-spaceBetween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
