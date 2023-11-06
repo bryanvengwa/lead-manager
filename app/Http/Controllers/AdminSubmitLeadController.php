@@ -24,8 +24,8 @@ class AdminSubmitLeadController extends Controller
         $request->merge(['password' => bcrypt($request->input('password'))]);
         Lead::create($request->all());
 
+        return redirect()->route('admin.dashboard')->with('refresh', true);
 
-        return redirect()->back();
     }
     public function update(Request $request)
     {
@@ -43,7 +43,8 @@ class AdminSubmitLeadController extends Controller
         $request->merge(['password' => bcrypt($request->input('password'))]);
         $lead->update($request->all());
 
-        return redirect()->route('agent.dashboard', ['reload' => true]);
+        return redirect()->route('admin.dashboard')->with('refresh', true);
+
 
     }
 

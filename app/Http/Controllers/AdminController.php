@@ -14,10 +14,14 @@ class AdminController extends Controller
      */
     public function index ()
     {
-        $leads = Lead::paginate(10);
         $totalLeads  = Lead::count();
+        $leads = Lead::orderBy('created_at', 'desc')->paginate(10);
+//        $leads = Lead::when($request->status !=null, function ($q) use ($request){
+//            return $q->where('status_message', $request->status);
+//        })->paginate(10);
         $prevPageLink = $leads->previousPageUrl();
         $nextPageLink = $leads->nextPageUrl();
+
 
 
         return view('admin.index' , compact('leads' , 'prevPageLink','nextPageLink','totalLeads'));
