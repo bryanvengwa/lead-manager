@@ -39,7 +39,7 @@
                             <div class="flex-container">
                                 <a href="{{ route('register') }}">Don't have an account ? Register</a>
                                 <br>
-                                <a href="{{ route('password.request') }}">Forgot your password ?</a>
+{{--                                <a href="{{ route('password.request') }}">Forgot your password ?</a>--}}
                                 <br>
                             </div>
                             <button type="submit" >Log in</button>
